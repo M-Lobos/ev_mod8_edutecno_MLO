@@ -1,0 +1,15 @@
+.header-container {
+    height: 50rem;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  /*   background-image: url('../image/images.jpeg'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: whitesmoke;
+    background-color: rgba(21, 21, 22, 0.849);
+}
