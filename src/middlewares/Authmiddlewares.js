@@ -15,6 +15,6 @@ export const authMiddleware = (req, res, next) => {
         req.user = decoded; //Este va a ser útil proximamente
         next();
     } catch (error) {
-        throw new AuthError('YOU SHALL NOT PASS!!', 498, error);
+        throw new AuthError('YOU SHALL NOT PASS!!🧙‍♂️' , 498, error);
     }
 };
