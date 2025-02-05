@@ -23,3 +23,4 @@ export const comparePassword = async(plainPassword, hashedPassword) => {
         throw new InternalServerError('No pudimos desencriptar la contraseña', 500, error);
     }
 };
+
