@@ -25,7 +25,7 @@ const { secretKey } = config;
             throw new AuthError('Usuario no encontrado', 404);
         }
 
-        const privateUser = normalizeUserPrivateData(user);
+        const privateUser = normalizeUser.PrivateData(user);
         const token = jwt.sign(
             { id: user.id, email: user.email }, 
             secretKey,

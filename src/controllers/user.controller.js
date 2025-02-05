@@ -1,9 +1,12 @@
 import { User } from "../models/User.model.js";
 import { Bootcamp } from "../models/Bootcamp.model.js";
+import { hashPassword } from "../services/auth/hash.service.js";
 
 
 
-export const updateUserById = async (req, res) => {
+
+/* 
+
     try {
         const { id } = req.params;
 
@@ -26,7 +29,40 @@ export const updateUserById = async (req, res) => {
             data: null,
         });
     }
+}; */
+
+export const updateUser = async (req, res, next) => {
+    try {
+        const { id } = req.params;
+        const updateData = req.body;
+
+        // Si la contraseña está presente en los datos de actualización, la hasheamos
+        if (updateData.password) {
+            updateData.password = await hashPassword(updateData.password);  // Hashea la contraseña
+        }
+
+        const [updateRows, [updatedUser]] = await User.update(updateData, {
+            where: { id },
+            returning: true,
+            attributes: { exclude: ['createdAt', 'updatedAt', 'deletedAt'] },
+        });
+
+        // Si no se encontró el usuario, lanzamos un error
+        if (updateRows === 0) {
+            throw new Error(`No se encontró al usuario con el ID: ${id}`);
+        }
+
+        res.status(200).json({
+            message: "Usuario actualizado con éxito",
+            status: 200,
+            newData: updatedUser,
+        });
+    } catch (error) {
+        next(error);
+    }
 };
+
+
 
 export const deleteUserById = async (req, res) => {
     try {
