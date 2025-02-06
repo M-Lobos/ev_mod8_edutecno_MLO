@@ -1,0 +1,96 @@
+______________________________________________________________
+crear usuarios con "singup"
+
+ruta: http://localhost:4000/api/v1/signup
+
+{
+    "firstName": "Mateo",
+    "lastName": "Diaz",
+    "email": "mateo.diaz@correo.com",
+    "password": "M@teo1256"
+}
+
+{
+    "firstName": "Santiago",
+    "lastName": "Mejias",
+    "email": "santiago.mejias@correo.com",
+    "password": "S@antiago1256"
+}
+
+{
+    "firstName": "Lucas",
+    "lastName": "Rojas",
+    "email": "lucas.rojas@correo.com",
+    "password": "Luc@s1256"
+}
+
+{
+    "firstName": "Facundo",
+    "lastName": "Fernández",
+    "email": "facundo.fernandez@correo.com",
+    "password": "F@cundo1256"
+}
+
+{
+    "firstName": "Robert",
+    "lastName": "Bloch",
+    "email": "robert.bloch@correo.com",
+    "password": "V@ampiroEstelar3421"
+}
+
+______________________________________________________________
+Ingreso usuario método "singin"
+
+ruta: http://localhost:4000/api/v1/user/signin
+
+{
+    "email": "robert.bloch@correo.com",
+    "password": "V@ampiroEstelar3421"
+}
+
+______________________________________________________________
+Modificación Usuario método "updateUser"
+
+ruta: http://localhost:4000/api/v1/users/user/:id
+
+{
+    "firstName": "Robert",
+    "lastName": "Blake",
+    "email": "robert.blake@correo.com",
+    "password": "V@ampiroEstelar3421"
+}
+
+
+______________________________________________________________
+Crear bootcamps de usuario método " createBootcamp " 
+
+ruta: http://localhost:4000/api/v1/bootcamp/bootcamps
+
+{
+    "title": "Introduciendo El Bootcamp de React",
+    "cue": "10",
+    "description": "React es la librería más usada en JavaScript para el desarrollo de interfaces"
+}
+
+{
+    "title": "Bootcamp Desarrollo Web Full Stack",
+    "cue": "12",
+    "description": "Crearas aplicaciones web utilizando las tecnologías y lenguajes más actuales y populares como JavaScript, nodeJS, Angular, MongoDB, ExpressJS"
+}
+
+{
+    "title": "Bootcamp Big Data, Inteligencia Artificial & Machine Learning",
+    "cue": "18",
+    "description": "Domina Data Science todo el ecosistema de lenguajes y herramientas de Big Data e integrarlos con modelos avanzados de Artificial Intelligence y Machine Learning"
+}
+
+______________________________________________________________
+Agregar usario a bootcamp usando método "adduser"
+
+ruta: http://localhost:4000/api/v1/bootcamp/bootcamps/addUser
+
+                *Lucas rojas a BigData*
+{
+    "bootcampId": "061f00e5-a4ac-44af-87f9-eb1a54b8350f",
+    "userId": "54ca2665-4eb4-4afb-ba91-b59680aa8eaf"
+}

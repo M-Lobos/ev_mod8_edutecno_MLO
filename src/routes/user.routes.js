@@ -10,9 +10,10 @@ import { authMiddleware } from "../middlewares/Authmiddlewares.js";
 const router = Router();
 
 
-router.get('/user', findAll);
-router.put('/user/:id', authMiddleware ,updateUser);
-router.delete('/user/:id', deleteUserById);
-router.get('/user/:id', findUserById);
+router.get('/user', authMiddleware, findAll);
+router.get('/user/:id', authMiddleware, findUserById);
+router.delete('/user/:id', authMiddleware, deleteUserById)
+router.put('/user/:id', authMiddleware,  updateUser)
+
 
 export default router
