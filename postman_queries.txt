@@ -94,3 +94,37 @@ ruta: http://localhost:4000/api/v1/bootcamp/bootcamps/addUser
     "bootcampId": "061f00e5-a4ac-44af-87f9-eb1a54b8350f",
     "userId": "54ca2665-4eb4-4afb-ba91-b59680aa8eaf"
 }
+
+                *Santiago mejias a BigData*
+{
+    "bootcampId": "061f00e5-a4ac-44af-87f9-eb1a54b8350f",
+    "userId": "0084ee39-ea29-49c4-beb7-c58ed916230d"
+}
+
+                *Mateo Diaz a BigData*
+{
+    "bootcampId": "061f00e5-a4ac-44af-87f9-eb1a54b8350f",
+    "userId": "86956a8a-ec7c-438b-9487-2a79732927d6"
+}
+
+                *Mateo Diaz a Desarrollo Web FS*
+{
+    "bootcampId": "593206a2-56f4-4c98-8995-f546314a49e5",
+    "userId": "86956a8a-ec7c-438b-9487-2a79732927d6"
+}
+
+                *Santiago mejias a React*
+{
+    "bootcampId": "7d19e581-6a29-425f-8335-3e90a51b46a7",
+    "userId": "0084ee39-ea29-49c4-beb7-c58ed916230d"
+}
+
+                *Mateo Diaz a React*
+{
+    "bootcampId": "7d19e581-6a29-425f-8335-3e90a51b46a7",
+    "userId": "86956a8a-ec7c-438b-9487-2a79732927d6"
+}
+
+
+
+
